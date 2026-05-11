@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Corpo -->
+  <ellipse cx="32" cy="38" rx="16" ry="18" fill="#1a472a"/>
+  <!-- Cabeça -->
+  <circle cx="32" cy="20" r="14" fill="#1a472a"/>
+  <!-- Orelhas -->
+  <polygon points="20,10 16,2 24,8" fill="#1a472a"/>
+  <polygon points="44,10 48,2 40,8" fill="#1a472a"/>
+  <!-- Olhos -->
+  <circle cx="26" cy="19" r="6" fill="#f0faf4"/>
+  <circle cx="38" cy="19" r="6" fill="#f0faf4"/>
+  <circle cx="26" cy="19" r="3.5" fill="#0f1f14"/>
+  <circle cx="38" cy="19" r="3.5" fill="#0f1f14"/>
+  <circle cx="27" cy="18" r="1.2" fill="#f59e0b"/>
+  <circle cx="39" cy="18" r="1.2" fill="#f59e0b"/>
+  <!-- Bico -->
+  <polygon points="32,24 29,28 35,28" fill="#f59e0b"/>
+  <!-- Peito -->
+  <ellipse cx="32" cy="40" rx="10" ry="12" fill="#2d6a4f"/>
+  <!-- Pés -->
+  <line x1="26" y1="56" x2="22" y2="62" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="56" x2="26" y2="63" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="56" x2="30" y2="62" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="38" y1="56" x2="34" y2="62" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="38" y1="56" x2="38" y2="63" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="38" y1="56" x2="42" y2="62" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+</svg>

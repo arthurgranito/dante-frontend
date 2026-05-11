@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 142 60% 97%;
+    --foreground: 142 40% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 142 40% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 142 40% 8%;
+    --primary: 142 47% 19%;
+    --primary-foreground: 142 60% 97%;
+    --secondary: 142 40% 30%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 142 20% 92%;
+    --muted-foreground: 142 20% 40%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 142 30% 82%;
+    --input: 142 30% 82%;
+    --ring: 142 47% 19%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 142 47% 9%;
+    --foreground: 142 20% 95%;
+    --card: 142 40% 12%;
+    --card-foreground: 142 20% 95%;
+    --popover: 142 40% 12%;
+    --popover-foreground: 142 20% 95%;
+    --primary: 142 47% 19%;
+    --primary-foreground: 142 60% 97%;
+    --secondary: 142 40% 30%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 142 30% 18%;
+    --muted-foreground: 142 15% 60%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 142 30% 22%;
+    --input: 142 30% 22%;
+    --ring: 142 47% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Scrollbar personalizada */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-dark-card/80 backdrop-blur-sm border border-light-border dark:border-dark-border;
+  }
+
+  .metric-card {
+    @apply rounded-2xl p-5 glass-card shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200;
+  }
+
+  .sidebar-link-active {
+    @apply bg-primary text-white shadow-lg shadow-primary/30;
+  }
+
+  .sidebar-link-inactive {
+    @apply text-foreground/70 hover:text-foreground hover:bg-muted;
+  }
+}
+
+/* Animação de shimmer para skeletons */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 25%,
+    hsl(var(--muted-foreground) / 0.1) 50%,
+    hsl(var(--muted)) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
