@@ -4,7 +4,9 @@
       "Bash(npm create *)",
       "Bash(npx create-vite@latest . --template react --force)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\arthu\\\\OneDrive\\\\Desktop\\\\AssistenteAutonomos\\\\frontend\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName)"
     ]
   }
 }

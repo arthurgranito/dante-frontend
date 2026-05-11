@@ -4,24 +4,25 @@
 
 @layer base {
   :root {
-    --background: 142 60% 97%;
-    --foreground: 142 40% 8%;
-    --card: 0 0% 100%;
-    --card-foreground: 142 40% 8%;
+    /* Sistema light moderno — fundo cinza neutro, sem tinte verde */
+    --background: 210 40% 98%;          /* #f8fafc */
+    --foreground: 222 47% 11%;           /* #0f172a */
+    --card: 0 0% 100%;                   /* #ffffff */
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 142 40% 8%;
-    --primary: 142 47% 19%;
-    --primary-foreground: 142 60% 97%;
-    --secondary: 142 40% 30%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 142 20% 92%;
-    --muted-foreground: 142 20% 40%;
-    --accent: 38 92% 50%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 142 47% 19%;             /* #1a472a */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;           /* #f1f5f9 */
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;               /* #f1f5f9 */
+    --muted-foreground: 215 16% 47%;    /* #64748b */
+    --accent: 38 92% 50%;               /* #f59e0b */
     --accent-foreground: 0 0% 5%;
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 51%;           /* #dc2626 */
     --destructive-foreground: 0 0% 98%;
-    --border: 142 30% 82%;
-    --input: 142 30% 82%;
+    --border: 214 32% 91%;              /* #e2e8f0 */
+    --input: 214 32% 91%;
     --ring: 142 47% 19%;
     --radius: 0.75rem;
   }
@@ -78,33 +79,23 @@
 }
 
 @layer components {
-  .glass-card {
-    @apply bg-white/80 dark:bg-dark-card/80 backdrop-blur-sm border border-light-border dark:border-dark-border;
-  }
-
+  /* Card de métrica do dashboard */
   .metric-card {
-    @apply rounded-2xl p-5 glass-card shadow-sm hover:shadow-md transition-shadow duration-200;
+    @apply bg-card border border-border rounded-2xl p-5 shadow-sm;
   }
 
+  /* Link base da sidebar */
   .sidebar-link {
-    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200;
-  }
-
-  .sidebar-link-active {
-    @apply bg-primary text-white shadow-lg shadow-primary/30;
-  }
-
-  .sidebar-link-inactive {
-    @apply text-foreground/70 hover:text-foreground hover:bg-muted;
+    @apply flex items-center gap-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200;
   }
 }
 
-/* Animação de shimmer para skeletons */
+/* Skeleton shimmer — usa variáveis CSS para funcionar em ambos os temas */
 .skeleton {
   background: linear-gradient(
     90deg,
     hsl(var(--muted)) 25%,
-    hsl(var(--muted-foreground) / 0.1) 50%,
+    hsl(var(--border)) 50%,
     hsl(var(--muted)) 75%
   );
   background-size: 200% 100%;
